@@ -1,6 +1,8 @@
-palette = "everforest_unsat"
+# palette = "everforest_unsat"
 # palette = "everforest_sat"
 # palette = "catppuccin_macchiato"
+palette = "dracula"
+
 
 format = """
 [](bg_morado)\
@@ -176,3 +178,11 @@ bg_verde   = "#8DA101"
 bg_acua    = "#35A77C"
 bg_azul    = "#3A94c5"
 
+[palettes.dracula]
+fg_text    = "#FFFBEF"
+bg_morado  = "#BD93F9"
+bg_rojo    = "#FF5555"
+bg_naranja = "#FFB86C"
+bg_verde   = "#50FA7B"
+bg_acua    = "#8BE9FD"
+bg_azul    = "#6272A4"
