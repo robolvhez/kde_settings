@@ -1,0 +1,178 @@
+palette = "everforest_unsat"
+# palette = "everforest_sat"
+# palette = "catppuccin_macchiato"
+
+format = """
+[](bg_morado)\
+$os\
+$username\
+[](bg:bg_rojo fg:bg_morado)\
+$directory\
+[](fg:bg_rojo bg:bg_naranja)\
+$git_branch\
+$git_status\
+[](fg:bg_naranja bg:bg_verde)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:bg_verde bg:bg_acua)\
+$docker_context\
+[](fg:bg_acua bg:bg_azul)\
+$time\
+[ ](fg:bg_azul)\
+$line_break$character
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:bg_morado fg:fg_text"
+style_root = "bg:bg_morado"
+format = '[󰣇 $user ]($style)'
+disabled = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:bg_morado fg:fg_text"
+disabled = true # Disabled by default
+
+[directory]
+style = "bg:bg_rojo fg:fg_text"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"~" = " "
+"Documents" = " 󰈙 Documents "
+"Downloads" = "  Downloads "
+"Music" = "  Music "
+"Pictures" = " 󰄄 Pictures "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[c]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:bg_acua fg:fg_text"
+format = '[ $symbol $context ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:bg_naranja fg:fg_text"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:bg_naranja fg:fg_text"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[gradle]
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:bg_verde fg:fg_text"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:bg_azul fg:fg_text"
+format = '[  $time ]($style)'
+
+[palettes.catppuccin_macchiato]
+fg_text    = ""
+bg_morado  = "#C6A0F6"
+bg_rojo    = "#ED8796"
+bg_naranja = "#F5A97F"
+bg_verde   = "#A6DA95"
+bg_acua    = "#8BD5CA"
+bg_azul    = "#8AADF4"
+
+[palettes.everforest_unsat]
+fg_text    = "#FFFBEF"
+bg_morado  = "#D699B6"
+bg_rojo    = "#E67E80"
+bg_naranja = "#E69875"
+bg_verde   = "#A7C080"
+bg_acua    = "#83C092"
+bg_azul    = "#7FBBB3"
+
+[palettes.everforest_sat]
+fg_text    = "#FFFBEF"
+bg_morado  = "#DF69BA"
+bg_rojo    = "#F85552"
+bg_naranja = "#F57D26"
+bg_verde   = "#8DA101"
+bg_acua    = "#35A77C"
+bg_azul    = "#3A94c5"
+
