@@ -39,6 +39,9 @@ spicetify apply
 ![Catpuccin - Macchiato (Accent: Peach) color scheme](img/bloom_macchiato-peach.png)
 **Catpuccin Macchiato Theme (Default: Peach accent)**
 
+![Dracula - Green color scheme](img/bloom_dracula-green.png)
+**Dracula Theme (Green accent)**
+
 </div>
 
 
